@@ -6,26 +6,28 @@ class LoginForm extends Component {
 render() {
   return (
     <Card>
-      <CardSection style={styles.TextStyle}>
-        <Input label="User Name"
+      <CardSection>
+        <Input
+          label="User Name"
           placeholder="Brian"
         />
-        <Input label="Password"
+      </CardSection>
+
+      <CardSection>
+        <Input
+          label="Password"
           placeholder="Password"
         />
+      </CardSection>
+
+      <CardSection>
         <Button>
           Login
         </Button>
       </CardSection>
     </Card>
   );
-};
+ }
 }
-const styles = {
-  TextStyle: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  }
-};
 
 export default LoginForm;
