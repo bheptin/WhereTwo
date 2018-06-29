@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import LoginForm from './components/LoginForm';
+import { View, Text } from 'react-native';
+import LoginForm from './components/LoginForm.js';
 
 class App extends Component {
   componentWillMount() {
@@ -16,12 +17,10 @@ class App extends Component {
   }
 
   render() {
-    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
-
     return (
-      <Provider store={store}>
-        <Router />
-      </Provider>
+      <View>
+        <LoginForm />
+      </View>
     );
   }
 }
